@@ -25,5 +25,8 @@
   },
   "mocha": {
     "timeout": 60000
+  },
+  "dependencies": {
+    "express": "^4.18.0"
   }
 }

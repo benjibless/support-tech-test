@@ -28,15 +28,16 @@ describe('Broken Sauce', function () {
         // will have to code around that or use the us-west-1 datacenter.
         // You can investigate the modal elements using a Live Test(https://app.saucelabs.com/live/web-testing)
 
-
-        let search = await driver.findElement(By.name("Search"));
+        console.log('ticker0');
+        let search = await driver.findElement(By.className("gLFyf"));
         await search.sendKeys("Sauce Labs");
-        
+        console.log('ticker1');
         let button = await driver.findElement(By.name("btnK"))
         await button.click()
-
+        console.log('ticker2');
         let page = await driver.findElement(By.partialLinkText("sauce"));
-
+        await page.click()
+        console.log('ticker3');
         await driver.quit();
     });
 });
